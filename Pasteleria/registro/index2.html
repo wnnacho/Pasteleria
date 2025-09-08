@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>Registro de Usuario</h1>
+        <form action="">
+            <div class="mb-3">
+                <label class="form-label" for="nombre">Nombre Completo</label>
+                <input class="form-control" type="text" name="nombre">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="correo1">Correo</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="correo2">Confirmar correo</label>
+                <input class="form-control" type="text">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password1">Contraseña</label>
+                <input class="form-control" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password2">Confirmar contraseña</label>
+                <input class="form-control" type="password">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="fecha">Fecha de nacimiento</label>
+                <input class="form-control" type="date">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="region">Region</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>-- Seleccione la region --</option>
+                    <option value="1">Región Metropolitana de Santiago</option>
+                    <option value="2">Región de Arica y Parinacota</option>
+                    <option value="3">Región de Tarapacá</option>
+                    <option value="4">Región de Antofagasta</option>
+                    <option value="5">Región de Atacama</option>
+                    <option value="6">Región de Coquimbo</option>
+                    <option value="7">Región de Valparaíso</option>
+                    <option value="8">Región de O'Higgins:</option>
+                    <option value="9">Región del Maule</option>
+                    <option value="10">Región de Ñuble</option>
+                    <option value="11">Región del Biobío</option>
+                    <option value="12">Región de La Araucanía</option>
+                    <option value="13">Región de Los Ríos</option>
+                    <option value="14">Región de Los Lagos</option>
+                    <option value="15">Región de Aysén del General Carlos Ibáñez del Campo</option>
+                    <option value="16">Región de Magallanes y la Antártica Chilena</option>
+              </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="promocion">Codigo de promocion</label>
+                <input class="form-control" type="text" placeholder="Opcional">
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn boton1">Registrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
