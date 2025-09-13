@@ -1,21 +1,21 @@
 // Lista de productos predefinidos
 const productos = [
-  { id: 'TC001', categoria: 'Tortas Cuadradas', nombre: 'Torta Cuadrada de Chocolate', precio: 45000, imagen: 'ruta/imagen-tc001.jpg' },
-  { id: 'TC002', categoria: 'Tortas Cuadradas', nombre: 'Torta Cuadrada de Frutas', precio: 50000, imagen: 'ruta/imagen-tc002.jpg' },
-  { id: 'TT001', categoria: 'Tortas Circulares', nombre: 'Torta Circular de Vainilla', precio: 40000, imagen: 'ruta/imagen-tt001.jpg' },
-  { id: 'TT002', categoria: 'Tortas Circulares', nombre: 'Torta Circular de Manjar', precio: 42000, imagen: 'ruta/imagen-tt002.jpg' },
-  { id: 'PI001', categoria: 'Postres Individuales', nombre: 'Mousse de Chocolate', precio: 5000, imagen: 'ruta/imagen-pi001.jpg' },
-  { id: 'PI002', categoria: 'Postres Individuales', nombre: 'Tiramisú Clásico', precio: 5500, imagen: 'ruta/imagen-pi002.jpg' },
-  { id: 'PSA001', categoria: 'Productos Sin Azúcar', nombre: 'Torta Sin Azúcar de Naranja', precio: 48000, imagen: 'ruta/imagen-psa001.jpg' },
-  { id: 'PSA002', categoria: 'Productos Sin Azúcar', nombre: 'Cheesecake Sin Azúcar', precio: 47000, imagen: 'ruta/imagen-psa002.jpg' },
-  { id: 'PT001', categoria: 'Pastelería Tradicional', nombre: 'Empanada de Manzana', precio: 3000, imagen: 'ruta/imagen-pt001.jpg' },
-  { id: 'PT002', categoria: 'Pastelería Tradicional', nombre: 'Tarta de Santiago', precio: 6000, imagen: 'ruta/imagen-pt002.jpg' },
-  { id: 'PG001', categoria: 'Productos Sin Gluten', nombre: 'Brownie Sin Gluten', precio: 4000, imagen: 'ruta/imagen-pg001.jpg' },
-  { id: 'PG002', categoria: 'Productos Sin Gluten', nombre: 'Pan Sin Gluten', precio: 3500, imagen: 'ruta/imagen-pg002.jpg' },
-  { id: 'PV001', categoria: 'Producto Vegano', nombre: 'Torta Vegana de Chocolate', precio: 50000, imagen: 'ruta/imagen-pv001.jpg' },
-  { id: 'PV002', categoria: 'Producto Vegano', nombre: 'Galletas Veganas de Avena', precio: 4500, imagen: 'ruta/imagen-pv002.jpg' },
-  { id: 'TE001', categoria: 'Torta Especial', nombre: 'Torta Especial de Cumpleaños', precio: 55000, imagen: 'ruta/imagen-te001.jpg' },
-  { id: 'TE002', categoria: 'Torta Especial', nombre: 'Torta Especial de Boda', precio: 60000, imagen: 'ruta/imagen-te002.jpg' }
+  { id: 'TC001', categoria: 'Tortas Cuadradas', nombre: 'Torta Cuadrada de Chocolate', precio: 45000, imagen: '../img/tcchocolate.webp' },
+  { id: 'TC002', categoria: 'Tortas Cuadradas', nombre: 'Torta Cuadrada de Frutas', precio: 50000, imagen: '../img/tccfrutas.jpg' },
+  { id: 'TT001', categoria: 'Tortas Circulares', nombre: 'Torta Circular de Vainilla', precio: 40000, imagen: '../img/tcvainilla.jpg' },
+  { id: 'TT002', categoria: 'Tortas Circulares', nombre: 'Torta Circular de Manjar', precio: 42000, imagen: '../img/tcmanjar.jpg' },
+  { id: 'PI001', categoria: 'Postres Individuales', nombre: 'Mousse de Chocolate', precio: 5000, imagen: '../img/mchocolate.jpg' },
+  { id: 'PI002', categoria: 'Postres Individuales', nombre: 'Tiramisú Clásico', precio: 5500, imagen: '../img/tiramisu.jpg' },
+  { id: 'PSA001', categoria: 'Productos Sin Azúcar', nombre: 'Torta Sin Azúcar de Naranja', precio: 48000, imagen: '../img/tsanaranja.webp' },
+  { id: 'PSA002', categoria: 'Productos Sin Azúcar', nombre: 'Cheesecake Sin Azúcar', precio: 47000, imagen: '../img/cheesecake.jpg' },
+  { id: 'PT001', categoria: 'Pastelería Tradicional', nombre: 'Empanada de Manzana', precio: 3000, imagen: '../img/emanzana.jpg' },
+  { id: 'PT002', categoria: 'Pastelería Tradicional', nombre: 'Tarta de Santiago', precio: 6000, imagen: '../img/tsantiago.jpg' },
+  { id: 'PG001', categoria: 'Productos Sin Gluten', nombre: 'Brownie Sin Gluten', precio: 4000, imagen: '../img/brownie.jpg' },
+  { id: 'PG002', categoria: 'Productos Sin Gluten', nombre: 'Pan Sin Gluten', precio: 3500, imagen: '../img/pan.jpg' },
+  { id: 'PV001', categoria: 'Producto Vegano', nombre: 'Torta Vegana de Chocolate', precio: 50000, imagen: '../img/tcvegana.jpeg' },
+  { id: 'PV002', categoria: 'Producto Vegano', nombre: 'Galletas Veganas de Avena', precio: 4500, imagen: '../img/galletas.jpg' },
+  { id: 'TE001', categoria: 'Torta Especial', nombre: 'Torta Especial de Cumpleaños', precio: 55000, imagen: '../img/tortacumple.jpg' },
+  { id: 'TE002', categoria: 'Torta Especial', nombre: 'Torta Especial de Boda', precio: 60000, imagen: '../img/tortaboda.jpeg' }
 ];
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
