@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio de Sesión - Pastelería Mil Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/estilo1.css">
+    <script src="../JS/funciones1.js"></script>
+</head>
+
+<body>
+<header>Pasteleria Mil Sabores</header>
+<nav>
+    <a href="../HTML/home.html">Home</a>
+    <a href="../HTML/productos.html">Productos</a>
+    <a href="../HTML/nosotros.html">Nosotros</a>
+    <a href="../HTML/blogs.html">Blogs</a>
+    <a href="../HTML/contacto.html">Contacto</a>
+</nav>
+
+<main class="container">
+    <h1>Iniciar Sesión</h1>
+    
+    <div style="max-width: 400px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px;">
+        <form id="loginForm" onsubmit="return validarLogin()">
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña *</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div style="margin-bottom: 1rem;">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Recordar mi sesión</label>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%;">Iniciar Sesión</button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 1.5rem;">
+            <p>¿No tienes cuenta? <a href="registroUsuario.html" style="color: #884513;">Regístrate aquí</a></p>
+            <p><a href="#" style="color: #884513;">¿Olvidaste tu contraseña?</a></p>
+        </div>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: #FFF5E1; border-radius: 4px;">
+            <h3 style="color: #884513; margin-bottom: 0.5rem;">¿Eres estudiante Duoc?</h3>
+            <p style="font-size: 0.9rem;">Regístrate con tu correo institucional para recibir torta gratis en tu cumpleaños</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pastelería Mil Sabores</h3>
+                <p>Celebrando 50 años de tradición y sabor</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="home.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Av. Dulce 123, Santiago</p>
+                <p>+56 2 2345 6789</p>
+                <p>info@pasteleriamilsabores.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function validarLogin() {
+    if (!validarFormulario('loginForm')) {
+        return false;
+    }
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    // Validación adicional para correos Duoc
+    if (email.includes('@duoc.cl') || email.includes('@duocuc.cl')) {
+        mostrarNotificacion('¡Hola estudiante Duoc! Recuerda que tienes beneficios especiales', 'success');
+    }
+    
+    // Simulación de login exitoso
+    mostrarNotificacion('Inicio de sesión exitoso', 'success');
+    
+    // Redirección después de login (simulado)
+    setTimeout(() => {
+        window.location.href = 'home.html';
+    }, 1500);
+    
+    return false; // Prevenir envío real del formulario
+}
+</script>
+</body>
+</html>
