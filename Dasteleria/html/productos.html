@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Productos - Pastelería Mil Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/estilo1.css">
+    <script src="../JS/funciones1.js"></script>
+    <script src="../JS/carrito.js"></script>
+</head>
+
+<body>
+<header>Pasteleria Mil Sabores</header>
+<nav>
+    <a href="../HTML/home.html">Home</a>
+    <a href="../HTML/productos.html">Productos</a>
+    <a href="../HTML/nosotros.html">Nosotros</a>
+    <a href="../HTML/blogs.html">Blogs</a>
+    <a href="../HTML/contacto.html">Contacto</a>
+</nav>
+
+<h1>Productos</h1>
+<p>My first paragraph.</p>
+
+<main class="container">
+    <h1>Nuestros Productos</h1>
+    
+    <div style="margin-bottom: 2rem; text-align: center;">
+        <button onclick="toggleCarrito()" class="btn">🛒 Ver Carrito</button>
+    </div>
+    
+    <div id="DivCarrito" style="display: none; background: white; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+        <h2>Tu Carrito de Compras</h2>
+        <div id="cart-list"></div>
+        <div style="margin-top: 1rem;">
+            <button onclick="vaciarCarrito()" class="btn btn-secondary">Vaciar Carrito</button>
+        </div>
+    </div>
+    
+    <div id="product-list">
+        <!-- Los productos se cargarán con JavaScript -->
+    </div>
+</main>
+
+</body>
+</html>

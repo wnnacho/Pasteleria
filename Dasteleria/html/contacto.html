@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Pastelería Mil Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/estilo1.css">
+    <script src="../JS/funciones1.js"></script>
+</head>
+
+<body>
+<header>Pasteleria Mil Sabores</header>
+<nav>
+    <a href="../HTML/home.html">Home</a>
+    <a href="../HTML/productos.html">Productos</a>
+    <a href="../HTML/nosotros.html">Nosotros</a>
+    <a href="../HTML/blogs.html">Blogs</a>
+    <a href="../HTML/contacto.html" class="active">Contacto</a>
+</nav>
+<aside><a href="../HTML/inicioSesion.html">Inicio de sesión</a> / <a href="../HTML/registroUsuario.html">Registrar Usuario</a></aside>
+
+<main class="container">
+    <h1>Contáctanos</h1>
+    <p style="text-align: center; margin-bottom: 2rem;">Estamos aquí para ayudarte. Escríbenos y te responderemos a la brevedad.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
+            <h3>📍 Dirección</h3>
+            <p>Av. Dulce 123<br>Santiago, Chile</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
+            <h3>📞 Teléfono</h3>
+            <p>+56 2 2345 6789</p>
+            <p>Lunes a Sábado: 9:00 - 20:00</p>
+        </div>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; text-align: center;">
+            <h3>✉️ Email</h3>
+            <p>info@pasteleriamilsabores.cl</p>
+            <p>pedidos@pasteleriamilsabores.cl</p>
+        </div>
+    </div>
+    
+    <div style="background: white; padding: 2rem; border-radius: 8px;">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Envíanos un Mensaje</h2>
+        
+        <form id="contactoForm" onsubmit="return validarFormulario('contactoForm')">
+            <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+            
+            <div class="form-group">
+                <label for="asunto">Asunto *</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="">Selecciona un asunto</option>
+                    <option value="consulta">Consulta general</option>
+                    <option value="pedido">Pedido especial</option>
+                    <option value="queja">Reclamo o queja</option>
+                    <option value="sugerencia">Sugerencia</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </div>
+    
+    <div style="margin-top: 2rem; text-align: center;">
+        <h2>También puedes encontrarnos en:</h2>
+        <div style="margin: 1rem 0;">
+            <a href="#" style="margin: 0 1rem; color: #884513; text-decoration: none;">Facebook</a>
+            <a href="#" style="margin: 0 1rem; color: #884513; text-decoration: none;">Instagram</a>
+            <a href="#" style="margin: 0 1rem; color: #884513; text-decoration: none;">Twitter</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pastelería Mil Sabores</h3>
+                <p>Celebrando 50 años de tradición y sabor</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="home.html">Home</a>
+                <a href="productos.html">Productos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Av. Dulce 123, Santiago</p>
+                <p>+56 2 2345 6789</p>
+                <p>info@pasteleriamilsabores.cl</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
