@@ -1,0 +1,304 @@
+/* Estilos específicos para el panel de administración */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F7FA;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #2C3E50;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+}
+
+/* Navegación */
+nav {
+    background-color: #3498DB;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover, nav a.active {
+    background-color: #2980B9;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Aside para login/registro */
+aside {
+    background-color: #ECF0F1;
+    padding: 0.5rem;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+aside a {
+    color: #2C3E50;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+    padding: 2rem 0;
+    min-height: 60vh;
+}
+
+h1, h2, h3 {
+    color: #2C3E50;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+/* Dashboard */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    color: #3498DB;
+    margin-bottom: 1rem;
+}
+
+.dashboard-card .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin: 1rem 0;
+}
+
+/* Tablas */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-table th, .admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ECF0F1;
+}
+
+.admin-table th {
+    background-color: #3498DB;
+    color: white;
+    font-weight: bold;
+}
+
+.admin-table tr:hover {
+    background-color: #F5F7FA;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498DB;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.btn {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+.btn-secondary {
+    background-color: #E74C3C;
+}
+
+.btn-secondary:hover {
+    background-color: #C0392B;
+}
+
+.btn-success {
+    background-color: #2ECC71;
+}
+
+.btn-success:hover {
+    background-color: #27AE60;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: #3498DB;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    color: #ECF0F1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a:hover {
+    color: #3498DB;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .admin-table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+/* Panel de control */
+.admin-panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-panel h2 {
+    border-bottom: 2px solid #3498DB;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Notificaciones */
+.notification {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.notification.success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+}
+
+.notification.error {
+    background-color: #F8D7DA;
+    color: #721C24;
+    border: 1px solid #F5C6CB;
+}
+
+.notification.info {
+    background-color: #D1ECF1;
+    color: #0C5460;
+    border: 1px solid #BEE5EB;
+}

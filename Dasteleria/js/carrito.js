@@ -6,7 +6,8 @@ const productos = [
     nombre: 'Torta Cuadrada de Chocolate', 
     precio: 45000, 
     imagen: '../img/tcchocolate.webp',
-    descripcion: 'Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.'
+    descripcion: 'Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.',
+    personalizable: true
   },
   { 
     id: 'TC002', 
@@ -14,7 +15,8 @@ const productos = [
     nombre: 'Torta Cuadrada de Frutas', 
     precio: 50000, 
     imagen: '../img/tccfrutas.jpg',
-    descripcion: 'Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.'
+    descripcion: 'Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.',
+    personalizable: false
   },
   { 
     id: 'TT001', 
@@ -22,7 +24,8 @@ const productos = [
     nombre: 'Torta Circular de Vainilla', 
     precio: 40000, 
     imagen: '../img/tcvainilla.jpg',
-    descripcion: 'Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión. '
+    descripcion: 'Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión.',
+    personalizable: false
   },
   { 
     id: 'TT002', 
@@ -30,7 +33,8 @@ const productos = [
     nombre: 'Torta Circular de Manjar', 
     precio: 42000, 
     imagen: '../img/tcmanjar.jpg',
-    descripcion: 'Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.'
+    descripcion: 'Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.',
+    personalizable: false
   },
   { 
     id: 'PI001', 
@@ -38,7 +42,8 @@ const productos = [
     nombre: 'Mousse de Chocolate', 
     precio: 5000, 
     imagen: '../img/mchocolate.jpg',
-    descripcion: 'Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal para los amantes del chocolate.'
+    descripcion: 'Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal para los amantes del chocolate.',
+    personalizable: false
   },
   { 
     id: 'PI002', 
@@ -46,7 +51,8 @@ const productos = [
     nombre: 'Tiramisú Clásico', 
     precio: 5500, 
     imagen: '../img/tiramisu.jpg',
-    descripcion: 'Un postre italiano individual con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.'
+    descripcion: 'Un postre italiano individual con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.',
+    personalizable: false
   },
   { 
     id: 'PSA001', 
@@ -54,7 +60,8 @@ const productos = [
     nombre: 'Torta Sin Azúcar de Naranja', 
     precio: 48000, 
     imagen: '../img/tsanaranja.webp',
-    descripcion: 'Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.'
+    descripcion: 'Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.',
+    personalizable: false
   },
   { 
     id: 'PSA002', 
@@ -62,7 +69,8 @@ const productos = [
     nombre: 'Cheesecake Sin Azúcar', 
     precio: 47000, 
     imagen: '../img/cheesecake.jpg',
-    descripcion: 'Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.'
+    descripcion: 'Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.',
+    personalizable: false
   },
   { 
     id: 'PT001', 
@@ -70,7 +78,8 @@ const productos = [
     nombre: 'Empanada de Manzana', 
     precio: 3000, 
     imagen: '../img/emanzana.jpg',
-    descripcion: 'Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.'
+    descripcion: 'Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.',
+    personalizable: false
   },
   { 
     id: 'PT002', 
@@ -78,7 +87,8 @@ const productos = [
     nombre: 'Tarta de Santiago', 
     precio: 6000, 
     imagen: '../img/tsantiago.jpg',
-    descripcion: 'Tradicional tarta española hecha con almendras, azúcar, y huevos, una delicia para los amantes de los postres clásicos.'
+    descripcion: 'Tradicional tarta española hecha con almendras, azúcar, y huevos, una delicia para los amantes de los postres clásicos.',
+    personalizable: false
   },
   { 
     id: 'PG001', 
@@ -86,7 +96,8 @@ const productos = [
     nombre: 'Brownie Sin Gluten', 
     precio: 4000, 
     imagen: '../img/brownie.jpg',
-    descripcion: 'Rico y denso, este brownie es perfecto para quienes necesitan evitar el gluten sin sacrificar el sabor.'
+    descripcion: 'Rico y denso, este brownie es perfecto para quienes necesitan evitar el gluten sin sacrificar el sabor.',
+    personalizable: false
   },
   { 
     id: 'PG002', 
@@ -94,7 +105,8 @@ const productos = [
     nombre: 'Pan Sin Gluten', 
     precio: 3500, 
     imagen: '../img/pan.jpg',
-    descripcion: 'Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.'
+    descripcion: 'Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.',
+    personalizable: false
   },
   { 
     id: 'PV001', 
@@ -102,7 +114,8 @@ const productos = [
     nombre: 'Torta Vegana de Chocolate', 
     precio: 50000, 
     imagen: '../img/tcvegana.jpeg',
-    descripcion: 'Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.'
+    descripcion: 'Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.',
+    personalizable: false
   },
   { 
     id: 'PV002', 
@@ -110,7 +123,8 @@ const productos = [
     nombre: 'Galletas Veganas de Avena', 
     precio: 4500, 
     imagen: '../img/galletas.jpg',
-    descripcion: 'Crujientes y sabrosas, estas galletas son una excelente opción para un snack saludable y vegano.'
+    descripcion: 'Crujientes y sabrosas, estas galletas son una excelente opción para un snack saludable y vegano.',
+    personalizable: false
   },
   { 
     id: 'TE001', 
@@ -118,7 +132,8 @@ const productos = [
     nombre: 'Torta Especial de Cumpleaños', 
     precio: 55000, 
     imagen: '../img/tortacumple.jpg',
-    descripcion: 'Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.'
+    descripcion: 'Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.',
+    personalizable: true
   },
   { 
     id: 'TE002', 
@@ -126,10 +141,10 @@ const productos = [
     nombre: 'Torta Especial de Boda', 
     precio: 60000, 
     imagen: '../img/tortaboda.jpeg',
-    descripcion: 'Elegante y deliciosa, esta torta está diseñada para ser el centro de atención en cualquier boda.'
+    descripcion: 'Elegante y deliciosa, esta torta está diseñada para ser el centro de atención en cualquier boda.',
+    personalizable: false
   }
 ];
-
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function inicializarCarrito() {
@@ -265,8 +280,15 @@ function mostrarDetallesProducto(id) {
       <p><strong>Categoría:</strong> ${producto.categoria}</p>
       <p><strong>Precio:</strong> $${producto.precio.toLocaleString('es-CL')}</p>
       <p><strong>Descripción:</strong> ${producto.descripcion}</p>
+      
+      ${producto.personalizable ? 
+        `<div style="margin: 1rem 0;">
+          <label for="mensaje-personalizado"><strong>Mensaje personalizado (opcional, máx. 100 caracteres):</strong></label>
+          <textarea id="mensaje-personalizado" rows="3" style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; resize: vertical;" placeholder="Escribe tu mensaje aquí..." maxlength="100"></textarea>
+        </div>` : ''}
+      
       <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; gap: 1rem;">
-        <button onclick="agregarAlCarrito('${producto.id}'); mostrarNotificacion('${producto.nombre} agregado al carrito', 'success');" class="btn">Agregar al carrito</button>
+        <button onclick="agregarDesdeModal('${producto.id}')" class="btn">Agregar al carrito</button>
         <button onclick="cerrarModalDetalles()" class="btn btn-secondary">Cerrar</button>
       </div>
     </div>
@@ -297,20 +319,95 @@ function cerrarModalDetalles() {
     modal.remove();
   }
 }
+// Función para agregar desde modal usando la propiedad personalizable
+function agregarDesdeModal(id) {
+  const producto = productos.find(p => p.id === id);
+  let mensajePersonalizado = '';
+  
+  if (producto.personalizable) {
+    const textarea = document.getElementById('mensaje-personalizado');
+    mensajePersonalizado = textarea ? textarea.value : '';
+  }
+  
+  const item = carrito.find(i => i.id === id);
+  
+  if (item) {
+    item.cantidad += 1;
+    if (producto.personalizable) {
+      item.mensajePersonalizado = mensajePersonalizado;
+    }
+  } else {
+    const nuevoItem = { ...producto, cantidad: 1 };
+    if (producto.personalizable) {
+      nuevoItem.mensajePersonalizado = mensajePersonalizado;
+    }
+    carrito.push(nuevoItem);
+  }
+  
+  guardarCarrito();
+  mostrarCarrito();
+  cerrarModalDetalles();
+  mostrarNotificacion(`${producto.nombre} agregado al carrito`, 'success');
+}
+function editarMensaje(id) {
+  const item = carrito.find(i => i.id === id);
+  if (!item) return;
+  
+  const nuevoMensaje = prompt('Edita tu mensaje personalizado (máx. 100 caracteres):', item.mensajePersonalizado || '');
+  
+  if (nuevoMensaje === null) {
+    return; // Usuario canceló
+  }
+  
+  // Limitar a 100 caracteres
+  if (nuevoMensaje.length > 100) {
+    item.mensajePersonalizado = nuevoMensaje.substring(0, 100);
+    mostrarNotificacion('El mensaje se ha truncado a 100 caracteres', 'info');
+  } else {
+    item.mensajePersonalizado = nuevoMensaje;
+  }
+  
+  guardarCarrito();
+  mostrarCarrito();
+  
+  if (nuevoMensaje.trim() !== '') {
+    mostrarNotificacion('Mensaje actualizado correctamente', 'success');
+  }
+}
 
 function agregarAlCarrito(id) {
   const producto = productos.find(p => p.id === id);
   const item = carrito.find(i => i.id === id);
-
-  if (item) {
-      item.cantidad += 1;
+  
+  let mensajePersonalizado = '';
+  
+  if (producto.personalizable) {
+    // Pedir mensaje personalizado
+    mensajePersonalizado = prompt(`"${producto.nombre}" es personalizable.\nPor favor, ingresa el mensaje que deseas incluir:`, '');
+    
+    // Si el usuario cancela, no agregar al carrito
+    if (mensajePersonalizado === null) {
+      return;
+    }
+     if (item) {
+    item.cantidad += 1;
+    // Si ya existe y es personalizable, actualizar el mensaje
+    if (producto.personalizable) {
+      item.mensajePersonalizado = mensajePersonalizado;
+    }
   } else {
-      carrito.push({ ...producto, cantidad: 1 });
+    // Crear nuevo item con propiedad de mensaje si es personalizable
+    const nuevoItem = { ...producto, cantidad: 1 };
+    if (producto.personalizable) {
+      nuevoItem.mensajePersonalizado = mensajePersonalizado;
+    }
+    carrito.push(nuevoItem);
   }
 
   guardarCarrito();
   mostrarCarrito();
   mostrarNotificacion(`${producto.nombre} agregado al carrito`, 'success');
+}
 }
 
 function disminuirCantidad(id) {
@@ -351,30 +448,45 @@ function mostrarCarrito() {
   cartList.innerHTML = '';
 
   if (carrito.length === 0) {
-      cartList.innerHTML = '<p>El carrito está vacío.</p>';
-      return;
+    cartList.innerHTML = '<p>El carrito está vacío.</p>';
+    return;
   }
 
   carrito.forEach(item => {
-      const itemDiv = document.createElement('div');
-      itemDiv.style.marginBottom = '1rem';
-      itemDiv.style.padding = '1rem';
-      itemDiv.style.background = '#f8f8f8';
-      itemDiv.style.borderRadius = '4px';
-      
-      itemDiv.innerHTML = `
-          <strong>${item.nombre}</strong><br>
-          Precio: $${item.precio.toLocaleString('es-CL')} x ${item.cantidad} = $${(item.precio * item.cantidad).toLocaleString('es-CL')}<br>
-          <button onclick="agregarAlCarrito('${item.id}')" class="btn" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">+</button>
-          <button onclick="disminuirCantidad('${item.id}')" class="btn" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">-</button>
-          <button onclick="eliminarDelCarrito('${item.id}')" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">Eliminar</button>
-      `;
-      cartList.appendChild(itemDiv);
+    const itemDiv = document.createElement('div');
+    itemDiv.style.marginBottom = '1rem';
+    itemDiv.style.padding = '1rem';
+    itemDiv.style.background = '#f8f8f8';
+    itemDiv.style.borderRadius = '4px';
+    
+    // Verificar si el producto tiene mensaje personalizado
+    const tieneMensaje = item.mensajePersonalizado && item.mensajePersonalizado.trim() !== '';
+    
+    let mensajeHTML = '';
+    if (tieneMensaje) {
+      mensajeHTML = `<br><strong>Mensaje:</strong> "${item.mensajePersonalizado}"`;
+    } else if (item.personalizable) {
+      mensajeHTML = `<br><em>Sin mensaje personalizado</em>`;
+    }
+    
+    itemDiv.innerHTML = `
+      <strong>${item.nombre}</strong><br>
+      Precio: $${item.precio.toLocaleString('es-CL')} x ${item.cantidad} = $${(item.precio * item.cantidad).toLocaleString('es-CL')}
+      ${mensajeHTML}
+      <div style="margin-top: 0.5rem;">
+        <button onclick="agregarAlCarrito('${item.id}')" class="btn" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">+</button>
+        <button onclick="disminuirCantidad('${item.id}')" class="btn" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">-</button>
+        <button onclick="editarMensaje('${item.id}')" class="btn" style="padding: 0.25rem 0.5rem; margin: 0.25rem; ${item.personalizable ? '' : 'display: none;'}">Editar mensaje</button>
+        <button onclick="eliminarDelCarrito('${item.id}')" class="btn btn-secondary" style="padding: 0.25rem 0.5rem; margin: 0.25rem;">Eliminar</button>
+      </div>
+    `;
+    cartList.appendChild(itemDiv);
   });
 
   const total = carrito.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
   cartList.innerHTML += `<h3>Total: $${total.toLocaleString('es-CL')}</h3>`;
 }
+
 
 // Función de notificación mejorada
 function mostrarNotificacion(mensaje, tipo = 'info') {

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Panel de Administración - Pastelería Mil Sabores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/estiloAdmin.css">
+    <script src="../JS/funciones1.js"></script>
+</head>
+
+<body>
+<header>Pastelería Mil Sabores - Panel de Administración</header>
+<nav>
+    <a href="../HTML/homeAdmin.html" class="active">Dashboard</a>
+    <a href="../HTML/adminProductos.html">Productos</a>
+    <a href="../HTML/adminPedidos.html">Pedidos</a>
+    <a href="../HTML/adminUsuarios.html">Usuarios</a>
+    <a href="../HTML/adminBlogs.html">Blogs</a>
+    <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+</nav>
+<aside id="adminInfo">Administrador: admin@pasteleriamilsabores.cl</aside>
+
+<main class="container">
+    <h1>Panel de Administración</h1>
+    
+    <div class="dashboard-grid">
+        <div class="dashboard-card">
+            <h3>Total de Pedidos</h3>
+            <div class="number">42</div>
+            <p>+5 desde la semana pasada</p>
+        </div>
+        
+        <div class="dashboard-card">
+            <h3>Ingresos Totales</h3>
+            <div class="number">$1.250.000</div>
+            <p>+15% desde el mes pasado</p>
+        </div>
+        
+        <div class="dashboard-card">
+            <h3>Usuarios Registrados</h3>
+            <div class="number">156</div>
+            <p>+12 este mes</p>
+        </div>
+        
+        <div class="dashboard-card">
+            <h3>Productos Activos</h3>
+            <div class="number">16</div>
+            <p>Todos disponibles</p>
+        </div>
+    </div>
+    
+    <div class="admin-panel">
+        <h2>Pedidos Recientes</h2>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Cliente</th>
+                    <th>Productos</th>
+                    <th>Total</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#00125</td>
+                    <td>María González</td>
+                    <td>Torta Chocolate (1)</td>
+                    <td>$45.000</td>
+                    <td><span style="color: #3498DB;">En preparación</span></td>
+                    <td>
+                        <button class="btn">Ver</button>
+                        <button class="btn btn-success">Completar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#00124</td>
+                    <td>Carlos Méndez</td>
+                    <td>Tiramisú (2), Cupcakes (6)</td>
+                    <td>$68.000</td>
+                    <td><span style="color: #2ECC71;">Entregado</span></td>
+                    <td>
+                        <button class="btn">Ver</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#00123</td>
+                    <td>Ana Silva</td>
+                    <td>Torta 3 Leches (1), Galletas (12)</td>
+                    <td>$52.500</td>
+                    <td><span style="color: #E74C3C;">Pendiente</span></td>
+                    <td>
+                        <button class="btn">Ver</button>
+                        <button class="btn btn-success">Procesar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="admin-panel">
+        <h2>Agregar Nuevo Producto</h2>
+        <form id="nuevoProductoForm">
+            <div class="form-group">
+                <label for="nombreProducto">Nombre del Producto</label>
+                <input type="text" id="nombreProducto" name="nombreProducto" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcionProducto">Descripción</label>
+                <textarea id="descripcionProducto" name="descripcionProducto" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="precioProducto">Precio</label>
+                <input type="number" id="precioProducto" name="precioProducto" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="categoriaProducto">Categoría</label>
+                <select id="categoriaProducto" name="categoriaProducto" required>
+                    <option value="">Seleccionar categoría</option>
+                    <option value="tortas">Tortas</option>
+                    <option value="postres">Postres</option>
+                    <option value="galletas">Galletas</option>
+                    <option value="cupcakes">Cupcakes</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="imagenProducto">URL de la Imagen</label>
+                <input type="url" id="imagenProducto" name="imagenProducto" required>
+            </div>
+            
+            <button type="button" onclick="agregarProducto()" class="btn">Agregar Producto</button>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Pastelería Mil Sabores</h3>
+                <p>Panel de Administración</p>
+            </div>
+            <div class="footer-section">
+                <h3>Acciones Rápidas</h3>
+                <a href="../HTML/adminProductos.html">Gestionar Productos</a>
+                <a href="../HTML/adminPedidos.html">Ver Pedidos</a>
+                <a href="../HTML/adminUsuarios.html">Administrar Usuarios</a>
+            </div>
+            <div class="footer-section">
+                <h3>Soporte</h3>
+                <p>admin@pasteleriamilsabores.cl</p>
+                <p>+56 2 2345 6789 (Ext. 101)</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Pastelería Mil Sabores. Panel de Administración.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Verificar si el usuario es administrador al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    const userRole = localStorage.getItem('userRole');
+    const userEmail = localStorage.getItem('userEmail');
+    
+    if (userRole !== 'admin') {
+        // Si no es administrador, redirigir al login
+        window.location.href = 'inicioSesion.html';
+    } else {
+        // Mostrar información del administrador
+        document.getElementById('adminInfo').textContent = 'Administrador: ' + userEmail;
+    }
+});
+
+function cerrarSesion() {
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userEmail');
+    window.location.href = 'inicioSesion.html';
+}
+
+function agregarProducto() {
+    // Aquí iría la lógica para agregar el producto
+    alert('Producto agregado correctamente');
+    document.getElementById('nuevoProductoForm').reset();
+}
+</script>
+</body>
+</html>

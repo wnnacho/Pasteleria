@@ -25,7 +25,7 @@
     <h1>Bienvenido a Pastelería Mil Sabores</h1>
     
     <section style="text-align: center; margin-bottom: 2rem;">
-        <img src="https://via.placeholder.com/800x400/FFC0CB/5D4037?text=Pastelería+Mil+Sabores" 
+        <img src="../img/logo.png" 
              alt="Pastelería Mil Sabores" style="max-width: 100%; border-radius: 8px;">
     </section>
     
@@ -82,5 +82,41 @@
         </div>
     </div>
 </footer>
+<script>
+// Verificar si el usuario es administrador al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    const userRole = localStorage.getItem('userRole');
+    
+    if (userRole === 'admin') {
+        // Redirigir automáticamente al panel de administración
+        window.location.href = 'homeAdmin.html';
+    }
+    
+    // Mostrar opciones de usuario/admin en el aside
+    const userEmail = localStorage.getItem('userEmail');
+    const asideElement = document.querySelector('aside');
+    
+    if (userEmail) {
+        if (userRole === 'admin') {
+            asideElement.innerHTML = `
+                <a href="homeAdmin.html">Panel Admin</a> | 
+                <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+            `;
+        } else {
+            asideElement.innerHTML = `
+                Hola, ${userEmail} | 
+                <a href="#" onclick="cerrarSesion()">Cerrar Sesión</a>
+            `;
+        }
+    }
+});
+
+function cerrarSesion() {
+    localStorage.removeItem('userRole');
+    localStorage.removeItem('userEmail');
+    window.location.href = 'inicioSesion.html';
+}
+
+</script>
 </body>
 </html>

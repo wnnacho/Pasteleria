@@ -90,20 +90,38 @@ function validarLogin() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
     
-    // Validación adicional para correos Duoc
-    if (email.includes('@duoc.cl') || email.includes('@duocuc.cl')) {
-        mostrarNotificacion('¡Hola estudiante Duoc! Recuerda que tienes beneficios especiales', 'success');
+    // CREDENCIALES DE ADMINISTRADOR
+    const adminCredentials = {
+        email: 'admin@pasteleriamilsabores.cl',
+        password: 'admin123' // Cambia esto por una contraseña real
+    };
+    
+    // Validar credenciales de admin
+    if (email === adminCredentials.email && password === adminCredentials.password) {
+        localStorage.setItem('userRole', 'admin');
+        localStorage.setItem('userEmail', email);
+        
+        mostrarNotificacion('Inicio de sesión como administrador exitoso', 'success');
+        setTimeout(() => {
+            window.location.href = 'homeAdmin.html'; // ← Redirige DIRECTAMENTE al admin
+        }, 1500);
+    }
+    else {
+        // Usuario normal
+        localStorage.setItem('userRole', 'user');
+        localStorage.setItem('userEmail', email);
+        
+        if (email.includes('@duoc.cl') || email.includes('@duocuc.cl')) {
+            mostrarNotificacion('¡Hola estudiante Duoc! Tienes beneficios especiales', 'success');
+        }
+        
+        mostrarNotificacion('Inicio de sesión exitoso', 'success');
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 1500);
     }
     
-    // Simulación de login exitoso
-    mostrarNotificacion('Inicio de sesión exitoso', 'success');
-    
-    // Redirección después de login (simulado)
-    setTimeout(() => {
-        window.location.href = 'home.html';
-    }, 1500);
-    
-    return false; // Prevenir envío real del formulario
+    return false;
 }
 </script>
 </body>
